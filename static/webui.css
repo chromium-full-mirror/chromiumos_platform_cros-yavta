@@ -1,0 +1,14 @@
+.device { border: 1; border-style: solid; }
+.devname { display: inline-block; }
+.control_panel { border: 1; border-style: solid;  width: 400; margin: 5; }
+/* .clsbox { display: inline-block; border: 1; border-style: solid; margin: 5;} */
+.ctrlgroup { border: 1; border-style: solid; margin: 5; }
+.ctrlval { }
+.ctrlval:before { content: ": "; }
+.ctrlmin { }
+.ctrlentry { margin-left: 1em; margin-right: 1em; display: inline-block; width: 200px; }
+.ctrlmax {  }
+
+.ctrlentry > label, .ctrlentry > input { display: block; }
+.ctrlentry > input[type=text] { display: inline-block; }
+#msg { position: fixed; z-index: 1000; left: 50%; }

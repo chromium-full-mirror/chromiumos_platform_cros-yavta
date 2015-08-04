@@ -1,0 +1,37 @@
+ChromiumOS Yet Another V4L2 Test Application
+
+cros-yavta is a V4L2 test application (our main usage is camera testing). It is
+based on another open source project, yavta, http://git.ideasonboard.org/yavta.git.
+
+== Features
+Inheritance from original yavta:
+- pure command line tool
+- open/close devices; start/stop streaming
+- specify resolution, framerate, format, etc.
+- get/set control values
+- dump raw frames to file
+
+More features:
+- display on X window
+- simulcast
+- dump raw frame to ivf format
+- dump decoded frame to ppm or y4m format
+- builtin mini web server
+  + some basic features from web interface
+  + streaming webm (for VP8 format)
+- remote server
+
+== Sample usage
+
+Output frames on the screen
+$ ./yavta --output --capture /dev/video0
+
+Output mjpeg frames
+$ ./yavta --output --capture --format mjpeg /dev/video1
+
+Output 100 frames on the screen and dump to file
+$ ./yavta --output --capture=100 --dump /dev/video0
+
+Web interface
+--port 9999
+Hint: You may need to change firewall rule to accept remote connection.
